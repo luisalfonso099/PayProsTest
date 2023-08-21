@@ -1,0 +1,28 @@
+<div class="container-ingresar-veiculo">
+    <h1>Ingresar Vehículo</h1>
+    <form id="formularioIngreso">
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" name="matricula" required>
+        <button type="button" id="btnVerificarMatricula">Verificar Matrícula</button>
+
+        <div id="datosVehiculo" style="display: none;">
+            <label for="marca">Marca:</label>
+            <select id="marca" name="marca" required>
+                <option value="" disabled selected>Seleccione una marca</option>
+                <!-- Agrega más opciones de marcas -->
+            </select>
+            <label for="modelo">Modelo:</label>
+            <select id="modelo" name="modelo" required>
+                <option value="" disabled selected>Seleccione un modelo</option>
+                <!-- Agrega más opciones de modelos -->
+            </select>
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value="" disabled selected>Seleccione un color</option>
+            </select>
+            <button type="button" id="btnIngresarVehiculo">Ingresar Vehículo</button>
+        </div>
+    </form>
+</div>
+
+

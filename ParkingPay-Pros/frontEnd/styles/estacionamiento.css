@@ -1,0 +1,45 @@
+.container-estacionamiento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lugares-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+h1{
+    font-family:cursive;
+    margin-bottom: 50px;
+}
+h2{
+    margin-bottom: -5px;
+}
+
+.lugar {
+    font-family:cursive ;
+    flex: 0 0 calc(17% - 10px); /* 20% para 5 columnas en una fila */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-height: 80px;
+    min-height: 80px;
+    border: 1px solid #ccc;
+}
+
+.libre {
+    background-color: rgba(102, 204, 102, 1); /* Verde para lugares libres */
+    border-radius: 7px;
+}
+
+.ocupado {
+    background-color: rgba(66, 133, 244, 1); /* Amarillo para lugares ocupados */
+    border-radius: 7px;
+    color: azure;
+}
