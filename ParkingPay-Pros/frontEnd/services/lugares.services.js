@@ -54,9 +54,7 @@ export const cargarLugaresOcupados = async()=> {
         const response = await fetch(`${PATH}obtener_lugares_ocupados.php`);
         const lugaresOcupados = await response.json();
         const lugaresOcupadosList = document.querySelector("#lugaresOcupadosList");
-
-       
-        console.log('sadasdad', lugaresOcupados);
+        lugaresOcupadosList.innerHTML = ''
         if(!lugaresOcupados.success && !lugaresOcupados.length){
             showSnackbar('El estacionamiento esta vacio', true);
             return;
@@ -93,6 +91,7 @@ export const sacarVehiculo = async () => {
         if (data.success) {
             showSnackbar(data.message, true);
             lugarId.value = '';
+            cargarLugaresOcupados()
         } else {
             showSnackbar(data.message, false);
         }
